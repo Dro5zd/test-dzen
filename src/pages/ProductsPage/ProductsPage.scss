@@ -1,0 +1,11 @@
+.products {
+  display: flex;
+  flex-direction: row;
+
+  &__title-wrapper {
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}

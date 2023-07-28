@@ -1,0 +1,81 @@
+@import '../../styles/variables';
+
+.header {
+  display: flex;
+  padding: 10px 200px;
+  position: relative;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 3px 2px 16px -9px rgba(94, 94, 94, 0.74);
+}
+
+.search-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+
+  &__input {
+    width: 300px;
+    padding: 4px 10px;
+    font-size: 14px;
+    //font-weight: 700;
+    //color: $font-primary;
+    outline: none;
+    border: none;
+    box-shadow: 0 1px 2px -1px rgba(94, 94, 94, 0.74) inset;
+    border-radius: 4px;
+    background-color: $bg-secondary;
+
+    &:focus {
+      border-color: $color-border;
+    }
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 700;
+      //color: $font-primary;
+    }
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: flex-end;
+
+  &__date-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+  }
+
+  &__title,
+  &__date {
+    font-size: 16px;
+  }
+
+  &__time {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+  }
+
+  &__activity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__time-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+  }
+}
