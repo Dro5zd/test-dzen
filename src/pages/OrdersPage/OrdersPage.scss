@@ -1,4 +1,12 @@
+@import '../../styles/variables';
+
 .groups {
   display: flex;
   flex-direction: row;
+}
+
+.orders {
+  background-color: teal;
+  height: 100%;
+  margin-left: $sidebar-width;
 }

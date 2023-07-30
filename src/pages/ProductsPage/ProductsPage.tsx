@@ -1,9 +1,13 @@
+import './ProductsPage.scss';
+import {Container} from "../../components/Container/Container";
 
 export const ProductsPage = () => {
 
-  return (
-    <div className="products">
-      PRODUCTS
-    </div>
-  );
+    return (
+        <Container>
+            <div className="products">
+                PRODUCTS
+            </div>
+        </Container>
+    );
 };

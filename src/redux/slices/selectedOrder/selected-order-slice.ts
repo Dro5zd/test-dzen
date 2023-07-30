@@ -1,26 +1,26 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface SelectedOrderState {
-  selected: number | null;
+    selected: number | null;
 }
 
 const initialState: SelectedOrderState = {
-  selected: null,
+    selected: null,
 };
 
 const order = createSlice({
-  name: 'order',
-  initialState,
-  reducers: {
-    select: (state, action: PayloadAction<number>) => {
-      state.selected = action.payload;
-    },
+    name: 'order',
+    initialState,
+    reducers: {
+        select: (state, action: PayloadAction<number>) => {
+            state.selected = action.payload;
+        },
 
-    unselect: (state) => {
-      state.selected = null;
+        unselect: (state) => {
+            state.selected = null;
+        },
     },
-  },
 });
 
-export const { select, unselect } = order.actions;
+export const {select, unselect} = order.actions;
 export const selectedOrderSlice = order.reducer;

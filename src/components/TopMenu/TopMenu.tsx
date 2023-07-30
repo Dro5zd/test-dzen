@@ -2,6 +2,7 @@ import React from 'react';
 import './TopMenu.scss';
 import SessionCounter from "../SessionCounter";
 import {Logo} from "../Logo/Logo";
+import {TimeAndDate} from "../TimeAndDate/TimeAndDate";
 
 export const TopMenu = () => {
 
@@ -15,7 +16,7 @@ export const TopMenu = () => {
                     className="search-content__input"
                 />
             </div>
-            <div>TIME</div>
+            <TimeAndDate/>
             <div>
                <SessionCounter/>
             </div>

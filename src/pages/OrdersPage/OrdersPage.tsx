@@ -1,11 +1,14 @@
 import React from 'react';
 import './OrdersPage.scss';
+import {Container} from "../../components/Container/Container";
 
 export const OrdersPage = () => {
 
-  return (
-    <div className="home">
-      ORDERS
-    </div>
-  );
+    return (
+        <Container>
+            <div className="orders">
+                ORDERS
+            </div>
+        </Container>
+    );
 };

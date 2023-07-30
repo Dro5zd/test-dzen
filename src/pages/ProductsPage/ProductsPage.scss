@@ -1,6 +1,12 @@
+@import '../../styles/variables';
+
 .products {
   display: flex;
   flex-direction: row;
+  background-color: #2fbd95;
+  width: 1200px;
+  height: 100vh;
+  margin-left: $sidebar-width;
 
   &__title-wrapper {
     margin-bottom: 80px;

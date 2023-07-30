@@ -18,11 +18,7 @@ const SessionCounter = () => {
         };
     }, []);
 
-    return (
-        <div>
-            <h1>Количество активных сессий: {sessionCount}</h1>
-        </div>
-    );
+    return <span>Active users count: {sessionCount}</span>;
 };
 
 export default SessionCounter;
