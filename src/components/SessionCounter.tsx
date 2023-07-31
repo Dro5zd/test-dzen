@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('https://inventory-dzencode.netlify.app');
+const socket = io('https://test-socket-server-gkhb.onrender.com');
 
 const SessionCounter = () => {
     const [sessionCount, setSessionCount] = useState(0);
