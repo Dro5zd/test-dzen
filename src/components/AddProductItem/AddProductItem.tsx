@@ -3,6 +3,7 @@ import './AddProductItem.scss';
 import { Order, Product } from '../../types';
 import { ReactComponent as List } from "../../assets/icons/list.svg"
 import { ReactComponent as Trash } from "../../assets/icons/trash.svg"
+import { ReactComponent as Cross } from "../../assets/icons/cross.svg"
 import { useModal } from '../../hooks/useModal';
 import {useAppDispatch} from "../../redux/store";
 import {deleteProduct} from "../../redux/slices/products/products-slice";
@@ -102,11 +103,7 @@ export const AddProductItem: FC<Props> = ({ product, currentOrder }) => {
               className="buttons__yes"
               onClick={handleRemoveProductClick}
             >
-              <img
-                className="buttons__yes--icon"
-                // src={icons.trashRed}
-                alt="Trash bucket"
-              />
+              <Trash className="buttons__yes--icon"/>
               Видалити
             </button>
           </div>
@@ -117,7 +114,7 @@ export const AddProductItem: FC<Props> = ({ product, currentOrder }) => {
             // iconStyles="cross-button__cross-button-icon"
             // icon={icons.cross}
           >
-            <Trash className="delete-button__icon"/>
+            <Cross className="cross-button__cross-button-icon"/>
           </Button>
         </div>
       </Modal>

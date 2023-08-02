@@ -9,7 +9,9 @@ import {Button} from "../Button/Button";
 import { ReactComponent as Cross } from "../../assets/icons/cross.svg"
 import { ReactComponent as List } from "../../assets/icons/list.svg"
 import { ReactComponent as Trash } from "../../assets/icons/trash.svg"
+import { ReactComponent as Arrow } from "../../assets/icons/angleRight.svg"
 import {select} from "../../redux/slices/selectedOrder/selected-order-slice";
+import moment from "moment";
 
 interface Props {
   order: OrderWithProducts;
@@ -24,6 +26,7 @@ export const OrderItem: FC<Props> = ({ order }) => {
     id,
     title,
     products,
+      date,
   } = order;
 
   const handleRemoveOrderClick = () => {
@@ -56,7 +59,7 @@ export const OrderItem: FC<Props> = ({ order }) => {
 
   const isSelected = selected === id;
   const usd = `${sumDefault0} $`;
-  const uah = `${sumDefault1} грн`;
+  const uah = `${sumDefault1} UAH`;
   const orderSize = selected
     ? 'order--small'
     : 'order';
@@ -91,10 +94,10 @@ export const OrderItem: FC<Props> = ({ order }) => {
 
       <div className="order__date date">
         <span className="date__order">
-          {/*{dateFormatted}*/}
+        {moment(date).format('DD / MM')}
         </span>
         <span className="date__current">
-          {/*{formattedDate()}*/}
+          {moment(date).format('DD / MMM / YYYY')}
         </span>
       </div>
 
@@ -105,11 +108,7 @@ export const OrderItem: FC<Props> = ({ order }) => {
 
       {isSelected ? (
         <div className="order__arrow-Wrapper">
-          <img
-            className="order__arrow"
-            // src={icons.angleRight}
-            alt="Angle right icon"
-          />
+          <Arrow className="order__arrow"/>
         </div>
       ) : (
         <Button

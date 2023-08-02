@@ -159,7 +159,6 @@
 }
 
 .buttons {
-  width: 100%;
   background-color: $color-secondary-dark;
   display: flex;
   align-items: flex-end;
@@ -190,14 +189,14 @@
     border-radius: 30px;
     padding: 10px 20px;
     border: 1px solid $bg-primary;
-    color: $color-info;
+    color: $icon-delete;
     font-weight: 600;
     font-size: 16px;
     display: flex;
     flex-direction: row;
 
     &:hover {
-      border-color: $color-info;
+      border-color: $icon-delete;
     }
 
     &--icon {

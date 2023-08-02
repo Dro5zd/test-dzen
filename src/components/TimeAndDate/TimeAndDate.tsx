@@ -1,31 +1,17 @@
 import {FC, useEffect, useState} from 'react';
 import './TimeAndDate.scss';
+import moment from "moment";
 
 interface Props {
     className?: string;
 }
 
 export const TimeAndDate: FC<Props> = () => {
-
-    const [date, setDate] = useState(new Date());
-
-    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
-    ];
-
-
+    const [time, setTime] = useState(moment().format('HH:MM'));
 
     function refreshClock() {
-        setDate(new Date());
+        setTime(moment().format('HH:MM'));
     }
-
-    const getTwoDigits = (rawDate: number) => (
-        rawDate < 10
-            ? `0${rawDate}`
-            : rawDate
-    );
-
-    const currentDate = `${getTwoDigits(date.getDate())} ${monthNames[date.getMonth()]} , ${date.getFullYear()}`;
 
     useEffect(() => {
         const timerId = setInterval(refreshClock, 1000);
@@ -35,9 +21,9 @@ export const TimeAndDate: FC<Props> = () => {
     }, []);
     return (
         <div>
-            <span>Today</span>
-            <span>{currentDate}</span>
-            <span>{getTwoDigits(date.getHours())} : {getTwoDigits(date.getMinutes())}</span>
+            <span>{moment().format('dddd')}</span>
+            <span>{moment().format('DD MMM, YYYY')}</span>
+            <span>{time}</span>
         </div>
 
     );
