@@ -3,7 +3,7 @@ import './OrdersPage.scss';
 import {Container} from "../../components/Container/Container";
 import {OrderList} from "../../components/OrderList/OrderList";
 import {Order, Product} from "../../types";
-import {useAppDispatch, useAppSelector} from "../../redux/store";
+import { useAppSelector} from "../../redux/store";
 // import {Button} from "../../components/Button/Button";
 // import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
 import {PageTitle} from "../../components/PageTitle/PageTitle";
@@ -20,9 +20,9 @@ export const OrdersPage = () => {
     const products = useAppSelector((state) => state.products.products);
     // const dispatch = useAppDispatch();
 
-    const handleAddOrderClick = () => {
-
-    };
+    // const handleAddOrderClick = () => {
+    //
+    // };
 
 
 
