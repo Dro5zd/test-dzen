@@ -1,6 +1,8 @@
 @import '../../styles/variables';
 
 .container {
-  padding: 80px 100px 0;
-  width: calc(100vw - $sidebar-width);
+  padding: 110px 50px 50px 250px;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-secondary;
 }

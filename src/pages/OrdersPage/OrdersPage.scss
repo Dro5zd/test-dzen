@@ -6,7 +6,29 @@
 }
 
 .orders {
-  background-color: teal;
   height: 100%;
-  margin-left: $sidebar-width;
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.home-button {
+  width: 40px;
+  height: 40px;
+  border-radius: $borderRadiusRounded;
+  border: 4px solid $color-secondary-dark;
+  background-color: $bg-secondary;
+  cursor: pointer;
+
+  &:hover {
+    border: 4px solid $color-secondary-extra-dark;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
 }

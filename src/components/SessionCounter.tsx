@@ -18,7 +18,7 @@ const SessionCounter = () => {
         };
     }, []);
 
-    return <span>Active users count: {sessionCount}</span>;
+    return <span>Active users: {sessionCount}</span>;
 };
 
 export default SessionCounter;

@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+
+.add-product-item {
+  padding: 20px 0;
+
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-border;
+  }
+}
+
+.delete-btn {
+  cursor: pointer;
+  border: none;
+  width: max-content;
+  height: max-content;
+  border-radius: $borderRadiusRounded;
+  background: transparent;
+  margin-right: 5px;
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}

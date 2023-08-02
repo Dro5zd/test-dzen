@@ -6,8 +6,8 @@ import {Sidebar} from "../Sidebar/Sidebar";
 export const Layout = () => {
     return (
         <>
-            <TopMenu/>
             <Sidebar/>
+            <TopMenu/>
             <Suspense fallback={<div>Loading page...</div>}>
                 <Outlet/>
             </Suspense>

@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+.select {
+  &__label {
+    margin-right: 10px;
+  }
+
+  &__selector {
+    outline: none;
+    padding: 3px 5px;
+    background-color: $bg-primary;
+    border-radius: 4px;
+    border-color: $color-border;
+  }
+}

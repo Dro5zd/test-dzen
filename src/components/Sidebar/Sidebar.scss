@@ -1,55 +1,58 @@
 @import '../../styles/variables';
 
 .sidebar {
-  height: calc(100vh - $header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   width: $sidebar-width;
   position: absolute;
-  //top: 0;
   left: 0;
-  //@include flexAlignCenterColumn;
   background-color: $bg-primary;
-  padding: 60px 60px;
+  padding: 110px 40px;
   box-shadow: 3px 2px 16px -9px #000000;
 
   &__user-info {
     position: relative;
   }
 }
-//
-//.user-info {
-//  &__avatar {
-//    height: 150px;
-//    width: 150px;
-//    border-radius: $borderRadiusRounded;
-//    margin-bottom: 40px;
-//    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.32),
-//      inset -0.2px -0.2px 14px -0.2px rgba(0, 0, 0, 0.32);
-//  }
-//
-//  &__button {
-//    position: absolute;
-//    bottom: 45px;
-//    right: 0;
-//  }
-//}
-//
-//.button {
-//  cursor: pointer;
-//  width: 40px;
-//  height: 40px;
-//  border-radius: $borderRadiusRounded;
-//  border: 1px solid $color-border;
-//  //@include flexCentered;
-//  background-color: $bg-primary;
-//  box-shadow: 3px 2px 16px -9px #000000;
-//
-//  &:hover {
-//    background-color: $bg-secondary;
-//    border-color: $bg-secondary;
-//  }
-//
-//  &__icon {
-//    width: 22px;
-//    height: 22px;
-//  }
-//}
+
+.user-info {
+  &__avatar {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: $bg-primary;
+  box-shadow: 3px 2px 16px -9px #000000;
+
+  &:hover {
+    background-color: $bg-secondary;
+    border-color: $bg-secondary;
+  }
+
+  &__icon {
+    width: 13px;
+    height: 12px;
+    fill: $icon-primary;
+  }
+}

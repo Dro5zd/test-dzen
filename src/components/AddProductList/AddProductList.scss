@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+
+.add-product-list {
+  padding: 35px;
+  border-radius: 6px;
+  border: 1px solid $color-border;
+  background: $bg-primary;
+  position: relative;
+  width: 70%;
+  height: 60vh;
+
+  &__content {
+    width: 100%;
+    height: 87%;
+    overflow: scroll;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__line {
+    border-top: 1px solid $color-border;
+  }
+}
+
+.list-add-button {
+  width: 20px;
+  height: 20px;
+  border-radius: $borderRadiusRounded;
+  border: 2px solid $color-secondary-dark;
+  background: $bg-secondary;
+  cursor: pointer;
+  margin: 30px 0 15px;
+
+  &__list-add-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  &:hover {
+    border: 2px solid $color-secondary-extra-dark;
+  }
+}
+
+.cross-button {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: $borderRadiusRounded;
+  border: 1px solid transparent;
+  background-color: $bg-primary;
+  box-shadow: 3px 2px 16px -9px #000000;
+
+  &:hover {
+    background-color: $font-primary;
+    border-color: $color-border;
+  }
+
+  &__cross-button-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

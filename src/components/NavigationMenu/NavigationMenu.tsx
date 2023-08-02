@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import {RoutePath} from "../../routes/RoutesPath";
+import './NavigationMenu.scss';
 
 export const NavigationMenu = () => {
     return (
