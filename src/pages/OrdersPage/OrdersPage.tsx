@@ -3,7 +3,7 @@ import './OrdersPage.scss';
 import {Container} from "../../components/Container/Container";
 import {OrderList} from "../../components/OrderList/OrderList";
 import {Order, Product} from "../../types";
-import {useAppSelector} from "../../redux/store";
+import {useAppDispatch, useAppSelector} from "../../redux/store";
 import {Button} from "../../components/Button/Button";
 import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
 import {PageTitle} from "../../components/PageTitle/PageTitle";
@@ -18,6 +18,11 @@ export const OrdersPage = () => {
     const selected = useAppSelector((state) => state.selectedOrder.selected);
     const orders = useAppSelector((state) => state.orders.orders);
     const products = useAppSelector((state) => state.products.products);
+    const dispatch = useAppDispatch();
+
+    const handleAddOrderClick = () => {
+
+    };
 
 
 
@@ -51,7 +56,7 @@ export const OrdersPage = () => {
         <Container>
                 <div className="home__page-info">
                     <Button
-                        // onClick={handleAddOrderClick}
+                        onClick={handleAddOrderClick}
                         buttonStyles="home-button"
 
                     >
