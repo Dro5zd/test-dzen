@@ -4,7 +4,7 @@ import {Container} from "../../components/Container/Container";
 import {OrderList} from "../../components/OrderList/OrderList";
 import {Order, Product} from "../../types";
 import { useAppSelector} from "../../redux/store";
-// import {Button} from "../../components/Button/Button";
+// import {Button1} from "../../components/Button1/Button1";
 // import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
 import {PageTitle} from "../../components/PageTitle/PageTitle";
 import {AddProductList} from "../../components/AddProductList/AddProductList";
@@ -55,13 +55,13 @@ export const OrdersPage = () => {
     return (
         <Container>
                 <div className="home__page-info">
-                    {/*<Button*/}
+                    {/*<Button1*/}
                     {/*    onClick={handleAddOrderClick}*/}
                     {/*    buttonStyles="home-button"*/}
 
                     {/*>*/}
                     {/*    <Plus className="home-button__icon"/>*/}
-                    {/*</Button>*/}
+                    {/*</Button1>*/}
 
                     <PageTitle title="Orders" quantity={ordersQuantity} />
                 </div>

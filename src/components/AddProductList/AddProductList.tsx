@@ -6,7 +6,7 @@ import {unselect} from "../../redux/slices/selectedOrder/selected-order-slice";
 import {AddProductItem} from "../AddProductItem/AddProductItem";
 import { ReactComponent as Cross } from "../../assets/icons/cross.svg"
 import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
-import { Button } from '../Button/Button';
+import {Button} from "../Button/Button";
 
 interface Props {
   currentOrder?: OrderWithProducts;
@@ -20,6 +20,10 @@ export const AddProductList: FC<Props> = ({ currentOrder }) => {
     dispatch(unselect());
   };
 
+  function handleAddProductClick() {
+    console.log('add product')
+  }
+
   return (
     <div className="add-product-list">
       <span className="add-product-list__title">
@@ -27,7 +31,7 @@ export const AddProductList: FC<Props> = ({ currentOrder }) => {
       </span>
 
       <Button
-        // onClick={handleAddProductClick}
+        onClick={handleAddProductClick}
         buttonStyles="add-product-list__list-add-button list-add-button"
         // iconStyles="list-add-button__list-add-icon"
         // icon={icons.plus}

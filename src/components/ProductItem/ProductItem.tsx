@@ -122,7 +122,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
       <Modal modalMode={modal} closeModal={toggleModal}>
         <div className="delete-window">
           <span className="delete-window__title">
-           Ви впевнені, що бажаєте видалити цей продукт?
+           Are you sure you want to delete this product?
           </span>
 
           <div className="delete-window__middle middle">
