@@ -4,8 +4,8 @@ import {Container} from "../../components/Container/Container";
 import {OrderList} from "../../components/OrderList/OrderList";
 import {Order, Product} from "../../types";
 import {useAppDispatch, useAppSelector} from "../../redux/store";
-import {Button} from "../../components/Button/Button";
-import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
+// import {Button} from "../../components/Button/Button";
+// import { ReactComponent as Plus } from "../../assets/icons/plus.svg"
 import {PageTitle} from "../../components/PageTitle/PageTitle";
 import {AddProductList} from "../../components/AddProductList/AddProductList";
 import {useGetOrder} from "../../hooks/useGetOrder";
@@ -18,7 +18,7 @@ export const OrdersPage = () => {
     const selected = useAppSelector((state) => state.selectedOrder.selected);
     const orders = useAppSelector((state) => state.orders.orders);
     const products = useAppSelector((state) => state.products.products);
-    const dispatch = useAppDispatch();
+    // const dispatch = useAppDispatch();
 
     const handleAddOrderClick = () => {
 
@@ -55,13 +55,13 @@ export const OrdersPage = () => {
     return (
         <Container>
                 <div className="home__page-info">
-                    <Button
-                        onClick={handleAddOrderClick}
-                        buttonStyles="home-button"
+                    {/*<Button*/}
+                    {/*    onClick={handleAddOrderClick}*/}
+                    {/*    buttonStyles="home-button"*/}
 
-                    >
-                        <Plus className="home-button__icon"/>
-                    </Button>
+                    {/*>*/}
+                    {/*    <Plus className="home-button__icon"/>*/}
+                    {/*</Button>*/}
 
                     <PageTitle title="Orders" quantity={ordersQuantity} />
                 </div>
