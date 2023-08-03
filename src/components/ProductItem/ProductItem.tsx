@@ -78,11 +78,11 @@ export const ProductItem: FC<Props> = ({ product }) => {
       <div className="product__guarantee guarantee">
         <div>
           <span className="guarantee__from">from</span>
-          <span className="guarantee__text">{moment(guarantee.start).format('DD / MMM / YYYY')}</span>
+          {/*<span className="guarantee__text">{moment(guarantee.start).format('DD / MMM / YYYY')}</span>*/}
         </div>
         <div>
           <span className="guarantee__to">to</span>
-          <span className="guarantee__text">{moment(guarantee.end).format('DD / MMM / YYYY')}</span>
+          {/*<span className="guarantee__text">{moment(guarantee.end).format('DD / MMM / YYYY')}</span>*/}
         </div>
       </div>
 
