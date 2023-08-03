@@ -16,10 +16,12 @@ export const TopMenu = () => {
                     className="search-content__input"
                 />
             </div>
-            <TimeAndDate/>
-            <div>
-               <SessionCounter/>
+
+            <div className="header__statistic statistic">
+                <TimeAndDate/>
+                <SessionCounter/>
             </div>
+
         </header>
     );
 };

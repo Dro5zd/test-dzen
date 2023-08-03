@@ -1,4 +1,27 @@
-.seconds {
-  width: 8px;
-  text-align: center;
+@import '../../styles/variables';
+
+.date-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &__day {
+
+  }
+}
+
+.time-wrapper {
+  display: flex;
+  align-items: center;
+
+  &__date {
+    margin-right: 20px;
+  };
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: $btn-primary;
+    margin-right: 10px;
+  }
+
 }

@@ -48,7 +48,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
     selected,
   });
 
-  const orderTitle = currentOrder?.title || 'Невідоме надходження';
+  const orderTitle = 'Unknown order';
 
   const handleRemoveProductClick = () => {
     dispatch(deleteProduct(id));
@@ -69,10 +69,6 @@ export const ProductItem: FC<Props> = ({ product }) => {
         <div className="product__name-cover name-cover">
           <span className="name-cover__title">
             {title}
-          </span>
-
-          <span className="name-cover__serial">
-            {serialNumber}
           </span>
         </div>
       </div>
@@ -96,7 +92,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
 
           return (
             <span
-                // key={}
+                key={value}
                 className="cost__currency"
             >
               {currentPrice}

@@ -27,7 +27,7 @@ export const productTitles: ProductTitles = {
     [SortProducts.MONITORS]: 'Asus ROG Swift PG-8q',
     [SortProducts.PHONES]: 'Huawei Honor 7 Honor 7A',
     [SortProducts.CONSOLES]: 'Nintendo Switch',
-    [SortProducts.LAPTOPS]: 'Asus ROG STRIX SCAR Edition GL503',
+    [SortProducts.LAPTOPS]: 'Asus ROG STRIX GL503',
     [SortProducts.ACCESSORIES]: 'Xbox controller',
 };
 
