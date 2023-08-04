@@ -11,7 +11,7 @@ import {ReactComponent as List} from "../../assets/icons/list.svg"
 import {ReactComponent as Trash} from "../../assets/icons/trash.svg"
 import {ReactComponent as Arrow} from "../../assets/icons/angleRight.svg"
 import {select} from "../../redux/slices/selectedOrder/selected-order-slice";
-import moment from "moment";
+import moment from 'moment';
 
 interface Props {
     order: OrderWithProducts;
@@ -40,7 +40,6 @@ export const OrderItem: FC<Props> = ({order}) => {
     };
 
     const productQuantity = products.length;
-    // const productQuantityTitle = currentProductCount(productQuantity);
 
     const sumDefault0 = products.reduce((sum, {price}) => {
         return (
