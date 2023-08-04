@@ -8,6 +8,7 @@
   width: $sidebar-width;
   position: absolute;
   left: 0;
+  z-index: 11;
   background-color: $bg-primary;
   padding: 110px 40px;
   box-shadow: 34px 13px 28px -34px rgba(94, 94, 94, 0.74);

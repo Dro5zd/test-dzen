@@ -75,8 +75,8 @@ export const OrderItem: FC<Props> = ({order}) => {
         if (isSelected) {
             return (
                 <div className="order__arrow-Wrapper">
-                  <Arrow className="order__arrow"/>
-                   </div>
+                    <Arrow className="order__arrow"/>
+                </div>
             );
         }
 
@@ -87,9 +87,9 @@ export const OrderItem: FC<Props> = ({order}) => {
 
         return (
             <Button
-              onClick={toggleModal}
-              buttonStyles="order__delete-button delete-button"
-        ><Trash className="delete-button__icon"/></Button>
+                onClick={toggleModal}
+                buttonStyles="order__delete-button delete-button"
+            ><Trash className="delete-button__icon"/></Button>
         );
     };
 
@@ -130,21 +130,7 @@ export const OrderItem: FC<Props> = ({order}) => {
                 <span className="price__usd">{usd}</span>
                 <span className="price__uah">{uah}</span>
             </div>
-
-            {/*{(isSelected || orderSize === 'order--small') ? (*/}
-            {/*    <div className="order__arrow-Wrapper">*/}
-            {/*        <Arrow className="order__arrow"/>*/}
-            {/*    </div>*/}
-            {/*) : (*/}
-            {/*    <Button*/}
-            {/*        onClick={toggleModal}*/}
-            {/*        buttonStyles="order__delete-button delete-button"*/}
-            {/*    ><Trash className="delete-button__icon"/></Button>*/}
-            {/*)}*/}
-
-
             {correctIcon}
-
             <Modal modalMode={modal} closeModal={toggleModal}>
                 <div className="delete-window">
           <span className="delete-window__title">
@@ -162,20 +148,18 @@ export const OrderItem: FC<Props> = ({order}) => {
                     </div>
 
                     <div className="delete-window__buttons-wrapper buttons">
-                        <button
-                            className="buttons__no"
+                        <Button
                             onClick={toggleModal}
-                        >
-                            Cancel
-                        </button>
+                            buttonStyles={"buttons__no"}>
+                            CANCEL
+                        </Button>
 
-                        <button
-                            className="buttons__yes"
+                        <Button
                             onClick={handleRemoveOrderClick}
-                        >
+                            buttonStyles={"buttons__yes"}>
                             <Trash className="buttons__yes--icon"/>
-                            Delete
-                        </button>
+                            DELETE
+                        </Button>
                     </div>
 
                     <Button

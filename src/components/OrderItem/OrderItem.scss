@@ -194,66 +194,28 @@
   display: flex;
   flex-direction: column;
   background-color: $bg-primary;
-  width: 50vw;
-  height: 30vh;
+  width: 800px;
   border-radius: 6px;
 
   &__title {
     font-size: 18px;
-    font-weight: 600;
-    padding: 30px 0 0 60px;
-  }
-}
-
-.middle {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 40px;
-}
-
-.wrap {
-  display: flex;
-  align-items: center;
-
-  &__mark {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: $btn-hover;
-    margin-right: 30px;
+    font-weight: 700;
+    padding: 30px;
   }
 
-  &__cover {
-    width: 100px;
-    margin-right: 30px;
-  }
-}
-
-.group {
-  &--title {
-    font-size: 18px;
-    font-weight: 500;
-    border-bottom: 1px solid $color-border;
-    line-height: 18px;
-    text-align: center;
-  }
-
-  &--serial {
-    font-size: 16px;
-    color: $color-border;
-    border-bottom: 1px solid $color-border;
-    line-height: 18px;
+  &__group {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .buttons {
   width: 100%;
-  background-color: $btn-primary;
+  background-color: #6eab43;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 40px;
+  padding: 20px 30px 30px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   gap: 20px;
@@ -265,15 +227,16 @@
     border: 1px solid transparent;
     color: $bg-primary;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     flex-direction: row;
     background-color: transparent;
-    //transition: transform 500ms ease;
+    transition: transform 500ms ease;
 
 
     &:hover {
       border-color: $bg-primary;
+      box-shadow: 0 0 12px 3px #99b9c9;
       transform: scale(1.1);
     }
   }
@@ -284,20 +247,22 @@
     border: 1px solid $bg-primary;
     color: $icon-delete;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     display: flex;
     flex-direction: row;
-    //transition: transform 500ms ease;
+    box-shadow: 11px 6px 17px -1px rgba(59, 59, 59, 0.7);
+    transition: transform 500ms ease;
 
 
     &:hover {
-      border-color: $icon-delete;
-      transform: scale(1.1);
+      //border-color: $icon-delete;
+      box-shadow: 0 0 12px 3px $icon-delete;
+      transform: scale(1.05);
     }
 
     &--icon {
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
       margin-right: 8px;
       fill: $icon-delete;
     }
