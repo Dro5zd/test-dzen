@@ -11,7 +11,8 @@ import {ReactComponent as List} from "../../assets/icons/list.svg"
 import {ReactComponent as Trash} from "../../assets/icons/trash.svg"
 import {ReactComponent as Arrow} from "../../assets/icons/angleRight.svg"
 import {select} from "../../redux/slices/selectedOrder/selected-order-slice";
-import dayjs from 'dayjs';
+import moment from 'moment';
+
 
 interface Props {
     order: OrderWithProducts;
@@ -118,10 +119,10 @@ export const OrderItem: FC<Props> = ({order}) => {
 
             <div className="order__date date">
         <span className="date__order">
-        {dayjs(date).format('DD / MM')}
+        {moment(date).format('DD / MM')}
         </span>
                 <span className="date__current">
-          {dayjs(date).format('DD / MMM / YYYY')}
+          {moment(date).format('DD / MMM / YYYY')}
         </span>
             </div>
 
