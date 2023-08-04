@@ -23,7 +23,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: $color-secondary-dark;
+    background-color: $btn-secondary;
     margin-right: 20px;
   }
 
@@ -33,7 +33,7 @@
   }
 
   &__type {
-    color: $color-secondary-dark;
+    color: $btn-secondary;
     font-size: 14px;
     width: 90px;
   }
@@ -43,11 +43,12 @@
   }
 
   &__group-title {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
     border-bottom: 1px solid $color-border;
     line-height: 18px;
     text-align: center;
+    color: $icon-primary;
   }
 }
 
@@ -55,17 +56,17 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  gap: 3px;
   width: max-content;
 
   &__title {
     width: max-content;
-    line-height: 16px;
-    font-size: 18px;
+    font-size: 16px;
     border-bottom: 1px solid $color-border;
   }
 
   &__serial {
-    font-size: 16px;
+    font-size: 13px;
     color: $color-border;
   }
 }
@@ -83,6 +84,7 @@
 
   &__text {
     text-align: center;
+    color: $icon-primary;
   }
 }
 
@@ -92,32 +94,17 @@
 
 
   &__currency {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 12px;
     color: $color-border;
     margin-bottom: 4px;
 
     &:last-child {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 14px;
-      color: $font-primary;
+      margin-bottom: 0;
+      color: $icon-primary;
     }
-  }
-}
-
-.delete-window {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: $bg-primary;
-  width: 50vw;
-  height: 30vh;
-  border-radius: 6px;
-
-  &__title {
-    font-size: 18px;
-    font-weight: 600;
-    padding: 30px 0 0 60px;
   }
 }
 
@@ -136,7 +123,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: $color-secondary-dark;
+    background-color: $btn-secondary;
     margin-right: 30px;
   }
 
@@ -164,7 +151,7 @@
 }
 
 .buttons {
-  background-color: $color-secondary-dark;
+  background-color: $btn-secondary;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;

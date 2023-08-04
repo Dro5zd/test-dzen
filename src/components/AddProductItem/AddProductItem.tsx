@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import './AddProductItem.scss';
 import { Order, Product } from '../../types';
-import { ReactComponent as List } from "../../assets/icons/list.svg"
 import { ReactComponent as Trash } from "../../assets/icons/trash.svg"
 import { ReactComponent as Cross } from "../../assets/icons/cross.svg"
 import { useModal } from '../../hooks/useModal';
@@ -16,10 +15,9 @@ interface Props {
   currentOrder: Order;
 }
 
-export const AddProductItem: FC<Props> = ({ product, currentOrder }) => {
+export const AddProductItem: FC<Props> = ({ product }) => {
   const dispatch = useAppDispatch();
   const { toggleModal, modal } = useModal();
-  const { title: currentTitle } = currentOrder;
 
   const {
     id,
@@ -55,9 +53,6 @@ export const AddProductItem: FC<Props> = ({ product, currentOrder }) => {
       </div>
 
       <span className="product__type">{type}</span>
-      <span className="product__current-group-title">
-        {currentTitle}
-      </span>
 
       <Button
         onClick={toggleModal}
@@ -65,13 +60,13 @@ export const AddProductItem: FC<Props> = ({ product, currentOrder }) => {
         // iconStyles="delete-btn__icon"
         // icon={icons.trash}
       >
-        <List className="products-button__icon"/>
+        <Trash className="delete-btn__icon"/>
       </Button>
 
       <Modal modalMode={modal} closeModal={toggleModal}>
         <div className="delete-window">
           <span className="delete-window__title">
-          Ви впевнені, що бажаєте видалити цей продукт?
+          Are you sure you want to delete this product?
           </span>
 
           <div className="delete-window__middle middle">
@@ -97,14 +92,14 @@ export const AddProductItem: FC<Props> = ({ product, currentOrder }) => {
               className="buttons__no"
               onClick={toggleModal}
             >
-              Відмінити
+              Cancel
             </button>
             <button
               className="buttons__yes"
               onClick={handleRemoveProductClick}
             >
               <Trash className="buttons__yes--icon"/>
-              Видалити
+              Delete
             </button>
           </div>
 

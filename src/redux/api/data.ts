@@ -55,15 +55,15 @@ export const orders = [
 export const products = [
     {
         id: 1,
-        serialNumber: 1234,
+        serialNumber: 'SN-NUNX4QYH',
         isNew: 1,
         photo: imageAddresses[SortProducts.MONITORS],
         title: productTitles[SortProducts.MONITORS],
         type: SortProducts.MONITORS,
         specification: 'Specification 1',
         guarantee: {
-            start: '2023-06-16',
-            end: '2026-06-16',
+            start: '2021-11-30T00:00:00.000Z',
+            end: '2022-11-30T00:00:00.000Z',
         },
         price: [
             {value: 100, symbol: 'USD', isDefault: 0},
@@ -74,15 +74,15 @@ export const products = [
     },
     {
         id: 2,
-        serialNumber: 1234,
+        serialNumber: 'SN-EK899QLZ',
         isNew: 1,
         photo: imageAddresses[SortProducts.PHONES],
         title: productTitles[SortProducts.PHONES],
         type: SortProducts.PHONES,
         specification: 'Specification 1',
         guarantee: {
-            start: '2024-11-20',
-            end: '2026-011-20',
+            start: '2023-06-16T00:00:00.000Z',
+            end: '2026-06-16T00:00:00.000Z',
         },
         price: [
             {value: 100, symbol: 'USD', isDefault: 0},
@@ -93,15 +93,15 @@ export const products = [
     },
     {
         id: 3,
-        serialNumber: 1234,
+        serialNumber: 'SN-H9L8MFJ2',
         isNew: 1,
         photo: imageAddresses[SortProducts.LAPTOPS],
         title: productTitles[SortProducts.LAPTOPS],
         type: SortProducts.LAPTOPS,
         specification: 'Specification 1',
         guarantee: {
-            start: '2023-04-16',
-            end: '2026-04-16',
+            start: '2023-03-08T00:00:00.000Z',
+            end: '2026-03-08T00:00:00.000Z',
         },
         price: [
             {value: 100, symbol: 'USD', isDefault: 0},
@@ -112,15 +112,15 @@ export const products = [
     },
     {
         id: 4,
-        serialNumber: 1234,
+        serialNumber: 'SN-YGRKAWP',
         isNew: 1,
         photo: imageAddresses[SortProducts.CONSOLES],
         title: productTitles[SortProducts.CONSOLES],
         type: SortProducts.CONSOLES,
         specification: 'Specification 1',
         guarantee: {
-            start: '2023-01-12',
-            end: '2026-01-12',
+            start: '2019-09-21T00:00:00.000Z',
+            end: '2024-09-21T00:00:00.000Z',
         },
         price: [
             {value: 100, symbol: 'USD', isDefault: 0},
@@ -131,15 +131,15 @@ export const products = [
     },
     {
         id: 5,
-        serialNumber: 1234,
+        serialNumber: 'SN-UPXRKW6G',
         isNew: 1,
         photo: imageAddresses[SortProducts.ACCESSORIES],
         title: productTitles[SortProducts.ACCESSORIES],
         type: SortProducts.ACCESSORIES,
         specification: 'Specification 1',
         guarantee: {
-            start: '2023-03-26',
-            end: '2025-03-26',
+            start: '2021-02-07T00:00:00.000Z',
+            end: '2024-02-07T00:00:00.000Z',
         },
         price: [
             {value: 100, symbol: 'USD', isDefault: 0},

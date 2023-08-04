@@ -64,8 +64,7 @@ export const OrdersPage = () => {
             <div className="order__page-orders-content">
                 <OrderList orders={ordersWithProducts}/>
 
-                {selected
-                    && <AddProductList currentOrder={currentOrder}/>}
+                {selected && <AddProductList currentOrder={currentOrder}/>}
             </div>
         </Container>
     );

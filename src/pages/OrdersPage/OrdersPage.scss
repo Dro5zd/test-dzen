@@ -25,7 +25,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 
 
@@ -60,19 +60,27 @@
 }
 
 .order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: $borderRadiusRounded;
-  border: 4px solid $color-secondary-dark;
-  background-color: $bg-secondary;
+  //box-shadow: -8px -5px 13px 5px rgba(0,0,0,0.39) inset;
+  //border: 4px solid $btn-primary;
+  border: 4px outset $btn-primary;
+  background-color: $btn-secondary;
   cursor: pointer;
 
+
   &:hover {
-    border: 4px solid $color-secondary-extra-dark;
+    border: 4px inset $btn-secondary;
+    background-color: $btn-primary;
   }
 
   &__icon {
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 14px;
+    fill: $bg-primary;
   }
 }

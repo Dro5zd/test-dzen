@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import './ProductItem.scss';
-import {Order, OrderWithProducts, Product} from '../../types';
+import {Product} from '../../types';
 import { useModal } from '../../hooks/useModal';
-import {useAppDispatch, useAppSelector} from "../../redux/store";
+import {useAppDispatch} from "../../redux/store";
 import {deleteProduct} from "../../redux/slices/products/products-slice";
 import {Modal} from "../Modal/Modal";
 import {Button} from "../Button/Button";
 import { ReactComponent as Trash } from "../../assets/icons/trash.svg"
-import {useGetOrder} from "../../hooks/useGetOrder";
-import moment from "moment/moment";
+import { ReactComponent as Cross } from "../../assets/icons/cross.svg"
+import moment from 'moment';
 
 interface Props {
   product: Product;
@@ -16,9 +16,6 @@ interface Props {
 
 export const ProductItem: FC<Props> = ({ product }) => {
   const dispatch = useAppDispatch();
-  const selected = useAppSelector((state) => state.selectedOrder.selected);
-  const orders = useAppSelector((state) => state.orders.orders);
-  const products = useAppSelector((state) => state.products.products);
   const { toggleModal, modal } = useModal();
   const {
     id,
@@ -29,24 +26,7 @@ export const ProductItem: FC<Props> = ({ product }) => {
     photo,
     price,
   } = product;
-  const getOrdersWithProducts = (
-      orders: Order[],
-      products: Product[],
-  ): OrderWithProducts[] => {
-    return orders.map((order) => ({
-      ...order,
-      products: products.filter(
-          (product) => (
-              product.order === order.id
-          ),
-      ),
-    }));
-  };
-  const ordersWithProducts = getOrdersWithProducts(orders, products);
-  const { currentOrder } = useGetOrder<OrderWithProducts>({
-    elements: ordersWithProducts,
-    selected,
-  });
+
 
   const orderTitle = 'Unknown order';
 
@@ -70,6 +50,9 @@ export const ProductItem: FC<Props> = ({ product }) => {
           <span className="name-cover__title">
             {title}
           </span>
+          <span className="name-cover__serial">
+            {serialNumber}
+          </span>
         </div>
       </div>
 
@@ -78,11 +61,11 @@ export const ProductItem: FC<Props> = ({ product }) => {
       <div className="product__guarantee guarantee">
         <div>
           <span className="guarantee__from">from</span>
-          {/*<span className="guarantee__text">{moment(guarantee.start).format('DD / MMM / YYYY')}</span>*/}
+          <span className="guarantee__text">{moment(guarantee.start).format('DD / MMM / YYYY')}</span>
         </div>
         <div>
           <span className="guarantee__to">to</span>
-          {/*<span className="guarantee__text">{moment(guarantee.end).format('DD / MMM / YYYY')}</span>*/}
+          <span className="guarantee__text">{moment(guarantee.end).format('DD / MMM / YYYY')}</span>
         </div>
       </div>
 
@@ -108,10 +91,8 @@ export const ProductItem: FC<Props> = ({ product }) => {
       <Button
         onClick={toggleModal}
         buttonStyles="order__delete-button delete-button"
-        // iconStyles="delete-button__icon"
-        // icon={icons.trash}
       >
-        <Trash className="buttons__yes--icon"/>
+        <Trash className="delete-button__icon"/>
       </Button>
 
       <Modal modalMode={modal} closeModal={toggleModal}>
@@ -143,29 +124,23 @@ export const ProductItem: FC<Props> = ({ product }) => {
               className="buttons__no"
               onClick={toggleModal}
             >
-              Відмінити
+              Cancel
             </button>
 
             <button
               className="buttons__yes"
               onClick={handleRemoveProductClick}
             >
-              <img
-                className="buttons__yes--icon"
-                // src={icons.trash}
-                alt="Trash bucket"
-              />
-              Видалити
+              <Trash className="buttons__yes--icon"/>
+              Delete
             </button>
           </div>
 
           <Button
             onClick={toggleModal}
             buttonStyles="add-product-list__cross-button cross-button"
-            // iconStyles="cross-button__cross-button-icon"
-            // icon={icons.cross}
           >
-            <Trash className="buttons__yes--icon"/>
+            <Cross className="cross-button__cross-button-icon"/>
           </Button>
         </div>
       </Modal>

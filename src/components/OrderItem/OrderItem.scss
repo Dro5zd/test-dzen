@@ -58,6 +58,7 @@
   &__arrow {
     height: 18px;
     width: 18px;
+    fill: $icon-primary;
   }
 }
 
@@ -79,7 +80,8 @@
   }
 
   &:hover {
-    border: 2px solid $color-border;
+    border: $bg-primary;
+    box-shadow: 0 0 12px 3px $color-border
   }
 }
 
@@ -152,14 +154,15 @@
   justify-content: center;
 
   &__icon {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     fill: $color-border;
   }
 
   &:hover {
-    border: 1px solid $color-border;
+    box-shadow: 0 0 12px 3px $color-border
   }
+
 }
 
 .cross-button {
@@ -181,7 +184,8 @@
     width: 15px;
     height: 15px;
     fill: $color-border;
-  };
+  }
+;
 }
 
 
@@ -216,7 +220,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: $color-secondary-dark;
+    background-color: $btn-hover;
     margin-right: 30px;
   }
 

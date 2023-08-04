@@ -2,25 +2,29 @@
 
 
 .add-product-item {
-  padding: 20px 0;
-
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $color-border;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-top: 1px solid $color-border;
 }
 
 .delete-btn {
   cursor: pointer;
+  width: 40px;
+  height: 40px;
   border: none;
-  width: max-content;
-  height: max-content;
   border-radius: $borderRadiusRounded;
   background: transparent;
   margin-right: 5px;
 
   &__icon {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
+    fill: $color-border;
+  }
+
+  &:hover {
+    box-shadow: 0 0 12px 3px $color-border
   }
 }
