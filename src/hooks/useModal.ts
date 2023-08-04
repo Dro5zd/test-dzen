@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 
 export const useModal = (initialValue?: boolean) => {
     const [modal, setModal] = useState<boolean>(initialValue || false);
@@ -7,5 +7,5 @@ export const useModal = (initialValue?: boolean) => {
         setModal((prevState) => !prevState);
     };
 
-    return { modal, toggleModal };
+    return {modal, toggleModal};
 };

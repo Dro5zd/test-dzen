@@ -1,25 +1,25 @@
-import { FC } from 'react';
+import {FC} from 'react';
 import './OrderList.scss';
-import { OrderWithProducts } from '../../types';
+import {OrderWithProducts} from '../../types';
 import {useAppSelector} from "../../redux/store";
 import {OrderItem} from "../OrderItem/OrderItem";
 
 interface Props {
-  orders: OrderWithProducts[];
+    orders: OrderWithProducts[];
 }
 
-export const OrderList: FC<Props> = ({ orders }) => {
-  const selected = useAppSelector((state) => state.selectedOrder.selected);
+export const OrderList: FC<Props> = ({orders}) => {
+    const selected = useAppSelector((state) => state.selectedOrder.selected);
 
-  const listType = selected ? 'order-list--short' : 'order-list';
+    const listType = selected ? 'order-list--short' : 'order-list';
 
-  return (
-    <div className={listType}>
-      {orders && orders.map((order) => {
-        const { id } = order;
+    return (
+        <div className={listType}>
+            {orders && orders.map((order) => {
+                const {id} = order;
 
-        return <OrderItem key={id} order={order} />;
-      })}
-    </div>
-  );
+                return <OrderItem key={id} order={order}/>;
+            })}
+        </div>
+    );
 };

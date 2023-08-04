@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import './TimeAndDate.scss';
 import moment from "moment";
-import { ReactComponent as Clock } from "../../assets/icons/clock.svg"
+import {ReactComponent as Clock} from "../../assets/icons/clock.svg"
 
 interface Props {
     className?: string;

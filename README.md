@@ -3,6 +3,7 @@
 - [DEMO LINK](https://inventory-dzencode.netlify.app)
 
 ### Technologies
+
 * React
 * Type Script
 * React Router DOM
@@ -11,6 +12,7 @@
 * moment
 
 ### Installing
+
 * Fork and clone this repository
 * Run `npm install` in your terminal
 * Run `npm start`

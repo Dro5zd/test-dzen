@@ -1,10 +1,10 @@
-import { FC, ReactNode } from 'react';
+import {FC, ReactNode} from 'react';
 import './Container.scss';
 
 interface Props {
-  children: ReactNode;
+    children: ReactNode;
 }
 
-export const Container: FC<Props> = ({ children }) => {
-  return <div className="container">{children}</div>;
+export const Container: FC<Props> = ({children}) => {
+    return <div className="container">{children}</div>;
 };

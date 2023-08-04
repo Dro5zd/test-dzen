@@ -3,7 +3,7 @@ import './Sidebar.scss';
 import {NavigationMenu} from "../NavigationMenu/NavigationMenu";
 import user from "../../assets/images/user-img.png"
 // import gear from "../../assets/icons/gear.svg"
-import { ReactComponent as Gear } from "../../assets/icons/gear.svg"
+import {ReactComponent as Gear} from "../../assets/icons/gear.svg"
 import {Button} from "../Button/Button";
 
 export const Sidebar = () => {

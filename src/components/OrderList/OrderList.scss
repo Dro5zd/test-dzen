@@ -1,11 +1,9 @@
 .order-list {
   height: 60vh;
-  //overflow: scroll;
   width: 100%;
 
   &--short {
     width: 41%;
-    //height: 60vh;
     overflow: scroll;
   }
 }

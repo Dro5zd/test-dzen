@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import io from 'socket.io-client';
 
 const socket = io('https://test-socket-server-gkhb.onrender.com');

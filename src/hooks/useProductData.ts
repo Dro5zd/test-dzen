@@ -1,52 +1,52 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import {
-  SortProducts,
+    SortProducts,
 } from '../types/SortProducts';
 import {imageAddresses, productTitles} from "../redux/api/data";
 
 export const useCurrentProduct = () => {
 
-  const [
-    currentType,
-    setCurrentType,
-  ] = useState<SortProducts>(SortProducts.ALL);
+    const [
+        currentType,
+        setCurrentType,
+    ] = useState<SortProducts>(SortProducts.ALL);
 
-  const generateRandomType = () => {
-    const randomIndex = Math.floor(Math.random()
-      * Object.values(SortProducts).length);
-    const randomType = Object.values(SortProducts)[randomIndex];
+    const generateRandomType = () => {
+        const randomIndex = Math.floor(Math.random()
+            * Object.values(SortProducts).length);
+        const randomType = Object.values(SortProducts)[randomIndex];
 
-    setCurrentType(randomType);
-  };
+        setCurrentType(randomType);
+    };
 
-  useEffect(() => {
-    generateRandomType();
-  }, [generateRandomType]);
+    useEffect(() => {
+        generateRandomType();
+    }, [generateRandomType]);
 
-  const getCurrType = () => {
-    if (currentType === SortProducts.ALL) {
-      return SortProducts.MONITORS;
-    }
+    const getCurrType = () => {
+        if (currentType === SortProducts.ALL) {
+            return SortProducts.MONITORS;
+        }
 
-    return currentType;
-  };
+        return currentType;
+    };
 
-  const getCurrImage = () => {
-    const type = getCurrType();
+    const getCurrImage = () => {
+        const type = getCurrType();
 
-    return imageAddresses[type];
-  };
+        return imageAddresses[type];
+    };
 
-  const getCurrName = () => {
-    const type = getCurrType();
+    const getCurrName = () => {
+        const type = getCurrType();
 
-    return productTitles[type];
-  };
+        return productTitles[type];
+    };
 
-  return {
-    currentType: getCurrType(),
-    currentImage: getCurrImage(),
-    currentName: getCurrName(),
-    generateRandomType,
-  };
+    return {
+        currentType: getCurrType(),
+        currentImage: getCurrImage(),
+        currentName: getCurrName(),
+        generateRandomType,
+    };
 };

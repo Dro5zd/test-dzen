@@ -28,7 +28,7 @@ export const ProductsPage = () => {
     return (
         <Container>
             <div className="products__title-wrapper">
-                <PageTitle title="Products" quantity={productsQuantity} />
+                <PageTitle title="Products" quantity={productsQuantity}/>
                 <Select
                     label="Type:"
                     onSelectChange={handleSelectChange}

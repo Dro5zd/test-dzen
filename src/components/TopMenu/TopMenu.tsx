@@ -1,6 +1,6 @@
 import React from 'react';
 import './TopMenu.scss';
-import SessionCounter from "../SessionCounter";
+import SessionCounter from "../SessionCounter/SessionCounter";
 import {Logo} from "../Logo/Logo";
 import {TimeAndDate} from "../TimeAndDate/TimeAndDate";
 
